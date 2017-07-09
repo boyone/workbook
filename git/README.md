@@ -13,18 +13,18 @@ Working with remote GIT repository
     Distributed Version Control  
 
     เป้าหมายการออกแบบ  
-        Speed
-        Simple Design
-        Support for Many Parallel Branches
-        Fully Distributed
-        To Handle Large Project Like Linux Kernel
+        Speed  
+        Simple Design  
+        Support for Many Parallel Branches  
+        Fully Distributed  
+        To Handle Large Project Like Linux Kernel  
 
-        ?Git Workflow ที่ ฟิวส์ แปล   
+    ?Git Workflow ที่ ฟิวส์ แปล   
 
     Who use Git
-```
-โลโก้
-```
+    ```
+    โลโก้
+    ```
 
 2. Install Git  
     Manual Install[mac, window, linux]
