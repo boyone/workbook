@@ -221,8 +221,10 @@ scm history: from file and patch to system
     ```
 
     * Green Field Project  
-     * Create New Repository on github[pic] name git101
-     * Clone project from remote
+     * Create New Repository on github name git101  
+     ![alt text](./images/repo-create.png "New Repository")  
+
+     * Clone project from remote  
     ```bash
     git clone git@github.com:username/git101.git [NEW_NAME]
 
