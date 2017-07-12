@@ -178,10 +178,17 @@ scm history: from file and patch to system
     pbcopy < ~/.ssh/id_rsa.pub
     ```
     * Add key to github
+<<<<<<< HEAD
      * Click your profile photo, then click Settings  
      ![alt text](./images/userbar-account-settings.png "Profile Settings")  
 
      * Click SSH and GPG keys, In the user settings sidebar  
+=======
+     * Click your profile photo, then click Settings
+     ![alt text](./images/userbar-account-settings.png "Profile Settings")  
+
+     * Click SSH and GPG keys, In the user settings sidebar
+>>>>>>> c72bf2a25f36291764d4e840e9055608ca8cd8ca
      ![alt text](./images/settings-sidebar-ssh-keys.png "SSH and GPG keys")  
 
      * Click New SSH key  
