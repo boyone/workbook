@@ -172,11 +172,24 @@ scm history: from file and patch to system
     ```
 
 5. Working with remote GIT repository[github]
-    * Generate ssh key and add to github + pic
+    * Generate ssh key
     ```bash
     ssh-keygen
     pbcopy < ~/.ssh/id_rsa.pub
     ```
+    * Add key to github
+     * Click your profile photo, then click Settings
+     ![alt text](./images/userbar-account-settings.png "Profile Settings")  
+
+     * Click SSH and GPG keys, In the user settings sidebar
+     ![alt text](./images/settings-sidebar-ssh-keys.png "SSH and GPG keys")  
+
+     * Click New SSH key  
+     ![alt text](./images/ssh-add-ssh-key.png "New SSH key")  
+
+     * Paste your key into the "Key" field  
+     ![alt text](./images/ssh-key-paste.png "Paste key")  
+
     * Testing your SSH connection
     ```bash
     ssh -T git@github.com
