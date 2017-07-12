@@ -6,13 +6,14 @@ GIT basic commmands
 GIT branching
 Working with remote GIT repository
 ```
+scm history: from file and patch to system
 
 1. Introduction to GIT   
     Version Control?  
     Centralized Version Control  
     Distributed Version Control  
 
-    เป้าหมายการออกแบบ  
+    เป้าหมายการออกแบบ[รูป]  
         Speed  
         Simple Design  
         Support for Many Parallel Branches  
@@ -113,8 +114,127 @@ Working with remote GIT repository
     git status
     ```
 
+    TIPs
+    ```bash
+    git help
+    git help command
+    ```
+
     Lift cycle of the status of files
-    ![alt text](https://git-scm.com/book/en/v2/images/lifecycle.png "The lifecycle of the status of your files")
+    ![alt text](./images/lifecycle.png "The lifecycle of the status of your files")
 
 4. GIT branching
-5. Working with remote GIT repository
+    * branch? + pic and flip chart
+
+    * Command
+    ```bash
+    git branch BRANCH NAME
+    git checkout BRANCH NAME
+    ```
+
+    Example
+    * Create new branch + pic
+    ```bash
+    git branch dev
+    ```
+    * Switch branch + pic
+    ```bash
+    git checkout dev
+    ```
+    * Modify and commit on branch + pic
+    ```bash
+    echo "On Branch dev" > README
+    git commit -am "Modify on dev"
+    ```
+    * Switch to master branch + pic
+    ```bash
+    git checkout master
+    ```
+    TIPs:
+    * Create and Switch branch
+    ```bash
+    git checkout -b BRANCH NAME
+
+    equals
+
+    git branch BRANCH NAME
+    git checkout BRANCH NAME
+    ```
+    * Merge branch dev to master? + pic
+    ```bash
+    git merge dev
+    ```
+    * Delete branch
+    ```bash
+    git branch -d BRANCH NAME
+    ```
+    * Show all Branches
+    ```bash
+    git branch
+    ```
+
+5. Working with remote GIT repository[github]
+    * Generate ssh key and add to github + pic
+    ```bash
+    ssh-keygen
+    pbcopy < ~/.ssh/id_rsa.pub
+    ```
+    * Testing your SSH connection
+    ```bash
+    ssh -T git@github.com
+    ```
+    * Add remote repository
+    ```bash
+    git remote add NAME REMOTE_URL
+    ```
+    * Remove remote repository
+    ```bash
+    git remote remove NAME
+    ```
+    * Rename remote repository
+    ```bash
+    git rename OLD_NAME NEW_NAME
+    ```
+    * Push changes to remote
+    ```bash
+    git push NAME BRANCH
+    ```
+    * Pull changes from remote
+    ```bash
+    git pull NAME BRANCH
+
+    equals
+
+    git fetch NAME
+    git merge BRANCH
+    ```
+
+    * Green Field Project  
+     * Create New Repository on github[pic] name git101
+     * Clone project from remote
+    ```bash
+    git clone git@github.com:username/git101.git [NEW_NAME]
+
+    or
+
+    git clone https://github.com/username/git101.git [NEW_NAME]
+    ```
+    * Existing Project
+     * Create a repository
+    ```bash
+    git init
+    ```
+     * Create New Repository on github[The same step as Green Field Project]
+     * Add remote repository
+    ```bash
+    git remote add origin git@github.com:username/git101.git [NEW_NAME]
+
+    or
+
+    git remote add origin https://github.com/username/git101.git [NEW_NAME]
+    ```
+
+Online Tutorial  
+https://try.github.io/levels/1/challenges/1  
+https://onlywei.github.io/explain-git-with-d3/  
+http://learngitbranching.js.org/  
