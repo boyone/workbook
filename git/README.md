@@ -23,9 +23,7 @@ scm history: from file and patch to system
     ?Git Workflow ที่ ฟิวส์ แปล   
 
     Who use Git
-    ```
-    โลโก้
-    ```
+    ![alt text](./images/companies_and_projects.png "Companies & Project Using git")
 
 2. Install Git  
     Manual Install[mac, window, linux]
