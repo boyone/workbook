@@ -6,12 +6,28 @@ GIT basic commmands
 GIT branching
 Working with remote GIT repository
 ```
-scm history: from file and patch to system
+scm history: from file and patch to system  
+    History Tracking
+    Collaborative History Tracking
+        who is change it
+        when do they change it
+        why do they change it
 
 1. Introduction to GIT   
-    Version Control?  
+    Version Control System Types?  
+    ![alt text](./images/SCM-taxonomy.png "Version Control :: http://git.mikeward.org/")  
+
     Centralized Version Control  
+    ![alt text](./images/centralized.png "Centralized Version Control :: Pro Git")  
+
     Distributed Version Control  
+    ![alt text](./images/distributed.png "Distributed Version Control :: Pro Git")  
+
+    Delta Based Storage  
+    ![alt text](./images/deltas.png "Delta Based Storage :: Pro Git")  
+
+    DAG Based Storage(directed acyclic graph)  
+    ![alt text](./images/snapshots.png "Delta Based Storage :: Pro Git")  
 
     เป้าหมายการออกแบบ[รูป]  
         Speed  
@@ -251,3 +267,4 @@ Online Tutorial
 https://try.github.io/levels/1/challenges/1  
 https://onlywei.github.io/explain-git-with-d3/  
 http://learngitbranching.js.org/  
+http://git.mikeward.org/
