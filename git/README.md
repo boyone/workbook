@@ -15,11 +15,11 @@ Working with remote GIT repository
         why they changed it  
     Without SCM: How to Control Source Code  
         Update Source Code by Patching [pic]  
-        Patching is not working any more
-----
+        Patching is not working any more   
+
     Linux and Source Control Management History: from file and patch to system  
 
-    Linux kernel case study  
+    Linux kernel  
         1,000 Developers  
         Working all across the world  
         Used on millions of computer  
@@ -28,7 +28,7 @@ Working with remote GIT repository
 
         11 years without version control system[1991 - 2002]  
         2002 - 2005 Bitkeeper  
-        2005 - present Git
+        2005 - present Git  
 
     Version Control System Types?  
     ![alt text](./images/SCM-taxonomy.png "Version Control :: http://git.mikeward.org/")  
@@ -45,17 +45,15 @@ Working with remote GIT repository
     DAG Based Storage(directed acyclic graph)  
     ![alt text](./images/snapshots.png "Delta Based Storage :: Pro Git")  
 
-    เป้าหมายการออกแบบ[รูป]  
-        Speed  
-        Simple Design  
-        Support for Many Parallel Branches  
-        Fully Distributed  
-        To Handle Large Project Like Linux Kernel  
+    เป้าหมายการออกแบบ  
+    ![alt text](./images/purpose.png "Purpose")  
 
     ?Git Workflow ที่ ฟิวส์ แปล   
 
     Who use Git
-    ![alt text](./images/companies_and_projects.png "Companies & Project Using git")
+    ![alt text](./images/companies_and_projects.png "Companies & Project Using git")  
+
+---   
 
 2. Install Git  
     Manual Install[mac, window, linux]
@@ -75,6 +73,7 @@ Working with remote GIT repository
     git config --global user.email "your email"
     git config -l
     ```
+---
 
 3. GIT basic commands  
     Create a repository
@@ -151,7 +150,9 @@ Working with remote GIT repository
     ```
 
     Lift cycle of the status of files
-    ![alt text](./images/lifecycle.png "The lifecycle of the status of your files")
+    ![alt text](./images/lifecycle.png "The lifecycle of the status of your files")  
+
+---
 
 4. GIT branching
     * branch? + pic and flip chart
@@ -202,6 +203,7 @@ Working with remote GIT repository
     ```bash
     git branch
     ```
+---
 
 5. Working with remote GIT repository[github]
     * Generate ssh key
@@ -278,7 +280,7 @@ Working with remote GIT repository
 
     git remote add origin https://github.com/username/git101.git [NEW_NAME]
     ```
-
+---
 Online Tutorial  
 https://try.github.io/levels/1/challenges/1  
 https://onlywei.github.io/explain-git-with-d3/  
