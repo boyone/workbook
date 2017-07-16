@@ -252,7 +252,7 @@ Working with remote GIT repository
     git merge BRANCH
     ```
 
-    * Green Field Project  
+    * New Project  
      * Create New Repository on github name git101  
      ![alt text](./images/repo-create.png "New Repository")  
 
