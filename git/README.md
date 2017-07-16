@@ -155,32 +155,46 @@ Working with remote GIT repository
 ---
 
 4. GIT branching
-    * branch? + pic and flip chart
+    * Branch  
+    ![alt text](./images/branch.png "git branch")  
 
     * Command
     ```bash
     git branch BRANCH NAME
     git checkout BRANCH NAME
-    ```
+    ```  
 
     Example
-    * Create new branch + pic
+    * Create new branch
+    ```bash
+    git branch
+    ```  
+    ![alt text](./images/branch01.png "master branch")  
+
     ```bash
     git branch dev
-    ```
-    * Switch branch + pic
+    ```      
+    ![alt text](./images/branch02-branch-dev.png "master and dev branch")  
+
+    * Switch branch
     ```bash
     git checkout dev
-    ```
-    * Modify and commit on branch + pic
+    ```  
+    ![alt text](./images/branch03-checkout-dev.png "switch to dev branch")  
+
+    * Modify and commit on branch
     ```bash
     echo "On Branch dev" > README
     git commit -am "Modify on dev"
-    ```
-    * Switch to master branch + pic
+    ```  
+    ![alt text](./images/branch04-commit-dev.png "commit on dev branch")  
+
+    * Switch to master branch
     ```bash
     git checkout master
-    ```
+    ```  
+    ![alt text](./images/branch05-checkout-master.png "checkout to master branch")  
+
     TIPs:
     * Create and Switch branch
     ```bash
@@ -191,18 +205,30 @@ Working with remote GIT repository
     git branch BRANCH NAME
     git checkout BRANCH NAME
     ```
-    * Merge branch dev to master? + pic
+    * Merge branch dev to master
     ```bash
     git merge dev
-    ```
+    ```  
+    ![alt text](./images/branch06-merge-dev.png "git branch")  
+
     * Delete branch
     ```bash
     git branch -d BRANCH NAME
-    ```
+    ```  
+    ![alt text](./images/branch07-delete-dev.png "delete dev branch")  
+
     * Show all Branches
     ```bash
     git branch
+    ```  
+    * Git Merge and Rebase
+    ```bash
+    git merge dev
+    git rebase dev
     ```
+    ![alt text](./images/branch08-git-merge.png "git branch")  
+    ![alt text](./images/branch09-git-rebase.png "git branch")  
+
 ---
 
 5. Working with remote GIT repository[github]
