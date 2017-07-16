@@ -45,7 +45,7 @@ Working with remote GIT repository
     DAG Based Storage(directed acyclic graph)  
     ![alt text](./images/snapshots.png "Delta Based Storage :: Pro Git")  
 
-    เป้าหมายการออกแบบ  
+    เป้าหมายการออกแบบ Goals!  
     ![alt text](./images/purpose.png "Purpose")  
 
     ?Git Workflow ที่ ฟิวส์ แปล   
@@ -67,7 +67,8 @@ Working with remote GIT repository
     ```
     apt-get install git
     ```
-    Configuration Git on Local Machine
+    Configuration Git on Local Machine for First-Time Git Setup  
+    Your Identity  
     ```
     git config --global user.name "your name"
     git config --global user.email "your email"
