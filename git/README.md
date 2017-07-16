@@ -155,48 +155,75 @@ Working with remote GIT repository
 ---
 
 4. GIT branching
-    * Branch  
     ![alt text](./images/branch.png "git branch")  
 
     * Command
     ```bash
-    git branch BRANCH NAME
-    git checkout BRANCH NAME
+    git branch [option] BRANCH_NAME
+    git checkout [option] BRANCH_NAME
+    git merge BRANCH NAME
+    git rebase BRANCH NAME
     ```  
 
     Example
-    * Create new branch
+
+    * Show all Branches  
     ```bash
     git branch
     ```  
     ![alt text](./images/branch01.png "master branch")  
 
+    * Create new branch  
     ```bash
     git branch dev
     ```      
     ![alt text](./images/branch02-branch-dev.png "master and dev branch")  
 
-    * Switch branch
+    * Switch branch  
     ```bash
     git checkout dev
     ```  
     ![alt text](./images/branch03-checkout-dev.png "switch to dev branch")  
 
-    * Modify and commit on branch
+    * Modify and commit on branch  
     ```bash
     echo "On Branch dev" > README
     git commit -am "Modify on dev"
     ```  
     ![alt text](./images/branch04-commit-dev.png "commit on dev branch")  
 
-    * Switch to master branch
+    * Switch to master branch  
     ```bash
     git checkout master
     ```  
     ![alt text](./images/branch05-checkout-master.png "checkout to master branch")  
 
-    TIPs:
-    * Create and Switch branch
+    * Merge branch dev to master  
+    ```bash
+    git merge dev
+    ```  
+    ![alt text](./images/branch06-merge-dev.png "git branch")  
+
+    * Delete branch  
+    ```bash
+    git branch -d dev
+    ```  
+    ![alt text](./images/branch07-delete-dev.png "delete dev branch")  
+
+    * Show all Branches  
+    ```bash
+    git branch
+    ```  
+    * Git Merge and Rebase  
+    ```bash
+    git merge dev
+    git rebase dev
+    ```
+    ![alt text](./images/branch08-git-merge.png "git branch")  
+    ![alt text](./images/branch09-git-rebase.png "git branch")  
+
+    TIPs:  
+    * Create and Switch branch  
     ```bash
     git checkout -b BRANCH NAME
 
@@ -205,30 +232,6 @@ Working with remote GIT repository
     git branch BRANCH NAME
     git checkout BRANCH NAME
     ```
-    * Merge branch dev to master
-    ```bash
-    git merge dev
-    ```  
-    ![alt text](./images/branch06-merge-dev.png "git branch")  
-
-    * Delete branch
-    ```bash
-    git branch -d BRANCH NAME
-    ```  
-    ![alt text](./images/branch07-delete-dev.png "delete dev branch")  
-
-    * Show all Branches
-    ```bash
-    git branch
-    ```  
-    * Git Merge and Rebase
-    ```bash
-    git merge dev
-    git rebase dev
-    ```
-    ![alt text](./images/branch08-git-merge.png "git branch")  
-    ![alt text](./images/branch09-git-rebase.png "git branch")  
-
 ---
 
 5. Working with remote GIT repository[github]
@@ -264,7 +267,7 @@ Working with remote GIT repository
     ```
     * Rename remote repository
     ```bash
-    git rename OLD_NAME NEW_NAME
+    git remote rename OLD_NAME NEW_NAME
     ```
     * Push changes to remote
     ```bash
