@@ -2,18 +2,34 @@ Topic
 ```
 Introduction to GIT  
 Install Git
-GIT basic commmands
+GIT basic commands
 GIT branching
 Working with remote GIT repository
-```
-scm history: from file and patch to system  
-    History Tracking
-    Collaborative History Tracking
-        who is change it
-        when do they change it
-        why do they change it
+```  
 
-1. Introduction to GIT   
+1. Introduction to GIT
+    History Tracking  
+    Collaborative History Tracking  
+        who changed it  
+        when they changed it  
+        why they changed it  
+    Without SCM: How to Control Source Code  
+        Update Source Code by Patching [pic]  
+        Patching is not working any more
+----
+    Linux and Source Control Management History: from file and patch to system  
+
+    Linux kernel case study  
+        1,000 Developers  
+        Working all across the world  
+        Used on millions of computer  
+        Used 90% of Supercomputer  
+        Run on mobile  
+
+        11 years without version control system[1991 - 2002]  
+        2002 - 2005 Bitkeeper  
+        2005 - present Git
+
     Version Control System Types?  
     ![alt text](./images/SCM-taxonomy.png "Version Control :: http://git.mikeward.org/")  
 
@@ -267,4 +283,5 @@ Online Tutorial
 https://try.github.io/levels/1/challenges/1  
 https://onlywei.github.io/explain-git-with-d3/  
 http://learngitbranching.js.org/  
-http://git.mikeward.org/
+http://git.mikeward.org/  
+https://www.slideshare.net/wocommunity/using-git-13552975

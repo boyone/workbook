@@ -1,11 +1,33 @@
 #### TDD OUTPUT  
 ```
+    Jame Greening's graph Test First or Debug Later
     Testable Code
     Feedback Loop
     Write Test to Drive Design
     TDD Rhythm[Red Green Refactor + Baby Steps]
     Think Before Code
 ```
+##### Jest  
+    Painless Javascript Testing  
+    Running Test    Writing Test    Hacking
+
+    What Makes a Great Product?  
+    Performance   
+        improved 1% over time
+    Features  
+        improved output  
+        immersive watch mode  
+        snapshots
+    Adoptability  
+
+    Jest's Platform  
+        jest-haste-map  
+        jest-snapshot  
+        jest-validate  
+
+Registries         |     Package Manager  
+-------------------|---------------------
+Store Modules     |     Download Modules and  Resolve Conflicts
 
 ##### Check NVM & NodeJS installation
 ```js
@@ -58,3 +80,9 @@ When you start the design of a function, visualize the types of tests you'd writ
 ```quote
 Write or change the minimum code to make it and other existing tests pass.
 ```
+
+https://egghead.io/lessons/javascript-use-jest-s-snapshot-testing-feature
+https://egghead.io/lessons/javascript-use-jest-s-interactive-watch-mode
+
+https://www.npmjs.com/package/jest-junit
+https://www.npmjs.com/package/jest-junit-reporter
