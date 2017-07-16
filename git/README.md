@@ -56,8 +56,8 @@ Working with remote GIT repository
 ---   
 
 2. Install Git  
-    Manual Install[mac, window, linux]
-        download: http://git-scm.com
+    Manual Install[mac, window, linux]  
+        download: http://git-scm.com  
     Install via package manager   
     mac
     ```
