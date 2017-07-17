@@ -1,3 +1,13 @@
+# Test driven development
+
+programming is like exploring a dark house. You go from
+room to room to room. Writing the test is like turning on the light. Then you can avoid
+the furniture and save your shins (the clean design resulting from refactoring). Then
+you’re ready to explore the next room.
+
+#### TDD is like shining light into darkroom one at a time
+
+
 ## TDD Exercise : Fizzbuzz
 
 ```
@@ -39,6 +49,151 @@ Fizz
 Buzz
 ... etc up to 100
 ```
+
+#### TDD cycle
+ 
+![TDD cycles](./images/tdd-cycle-with-thinking.png)
+
+The TDD mantra: Red/Green/Refactor
+
+    - Red: Write a little test that doesn't work, and perhaps doesn't even compile at first.
+    - Green: Make the test work quickly, committing whatever sins necessary in the process.
+    - Refactor: Eliminate all of the duplication created in merely getting the test to work.
+
+
+
+#### Start from understanding
+
+To really understand problem, we can use a "Specification by example" technique by create a table which mapping between given input and correct answer
+
+| Given number(int) | Correct answer(string) |
+|-------------------|------------------------|
+| 1                 | 1                      |
+| 2                 | 2                      |
+| 3                 | Fizz                   |
+| 4                 | 4                      |
+| 5                 | Buzz                   |
+| 6                 | Fizz                   |
+| 7                 | 7                      |
+| 8                 | 8                      |
+| 9                 | Fizz                   |
+| 10                | Buzz                   |
+| 15                | FizzBuzz               |
+| 30                | FizzBuzz               |
+| 99                | Fizz                   |
+| 100               | Buzz                   |
+
+#### Step 1. Write the fail test.
+
+- Create file fizzbuzz.test.js
+```js
+const fizzbuzz = require("./fizzbuzz.js");
+
+test('Given 1 should return 1', () => {
+    expect(fizzbuzz(1)).toBe(1);
+});
+```
+- Execute test to see expected result
+
+```sh
+npm test
+```
+```sh
+> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
+> jest
+
+ FAIL  ./fizzbuzz.test.js
+  ● Test suite failed to run
+
+    Cannot find module './fizzbuzz.js' from 'fizzbuzz.test.js'
+
+      at Resolver.resolveModule (node_modules/jest-resolve/build/index.js:179:17)
+      at Object.<anonymous> (fizzbuzz.test.js:1:107)
+```
+
+#### Step 2. Make the test pass.
+- Create file fizzbuzz.js
+
+- Run test again and see what happen.
+``` sh
+npm test
+``` 
+``` sh
+> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
+> jest
+
+ FAIL  ./fizzbuzz.test.js
+  ● Given 1 should return 1
+
+    TypeError: fizzbuzz is not a function
+
+      at Object.<anonymous>.test (fizzbuzz.test.js:4:12)
+      at process._tickCallback (internal/process/next_tick.js:103:7)
+
+  ✕ Given 1 should return 1 (2ms)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        1.331s
+Ran all test suites.
+npm ERR! Test failed.  See above for more details.
+```
+
+- Add code to fizzbuzz.js
+``` js
+module.exports = fizzbuzz;
+
+function fizzbuzz(number) {
+    return 1;
+}
+```
+
+- Then run test again
+``` sh
+> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
+> jest
+
+ PASS  ./fizzbuzz.test.js
+  ✓ Given 1 should return 1 (3ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.318s
+Ran all test suites.
+```
+
+
+#### Step 3. Look for bad code and refactoring.
+- We don't see anything bad for now then skip to next step
+
+#### Repeat
+- Mark finished and select the next test case from table
+
+| Given number(int) | Correct answer(string) |
+|-------------------|------------------------|
+| <del>1                 | <del>1                      |
+| 2                 | 2                      |
+| 3                 | Fizz                   |
+| 4                 | 4                      |
+| 5                 | Buzz                   |
+| 6                 | Fizz                   |
+| 7                 | 7                      |
+| 8                 | 8                      |
+| 9                 | Fizz                   |
+| 10                | Buzz                   |
+| 15                | FizzBuzz               |
+| 30                | FizzBuzz               |
+| 99                | Fizz                   |
+| 100               | Buzz                   |
+
+- Repeat step 1 to 3 until the last test case
+
+#### More to read
+http://codingdojo.org/kata/FizzBuzz/
+https://8thlight.com/blog/uncle-bob/2013/09/23/Test-first.html
+
 
 
 
