@@ -87,7 +87,7 @@ To really understand problem, we can use a "Specification by example" technique 
 
 - Create file fizzbuzz.test.js
 
-```js
+``` js
 const fizzbuzz = require("./fizzbuzz.js");
 
 test('Given 1 should return 1', () => {
@@ -98,11 +98,11 @@ test('Given 1 should return 1', () => {
 ```
 - Execute test to see expected result
 
-```sh
+``` sh
 npm test
 ```
 
-```sh
+``` sh
 > jest
 
  FAIL  ./fizzbuzz.test.js
