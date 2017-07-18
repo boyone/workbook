@@ -5,7 +5,9 @@ room to room to room. Writing the test is like turning on the light. Then you ca
 the furniture and save your shins (the clean design resulting from refactoring). Then
 you’re ready to explore the next room.
 
-#### TDD is like shining light into darkroom one at a time
+ Test driven development(TDD) is like shining the light into dark room one at a time.
+
+ The best way to learn TDD is learning by doing. Let's start by the first exercise.
 
 
 ## TDD Exercise : Fizzbuzz
@@ -17,13 +19,11 @@ http://codingdojo.org/kata/FizzBuzz/
 
 #### Problem description
 
-```
 Imagine the scene. You are eleven years old, and in the five minutes before the end of the lesson, your Maths teacher decides he should make his class more “fun” by introducing a “game”. He explains that he is going to point at each pupil in turn and ask them to say the next number in sequence, starting from one. The “fun” part is that if the number is divisible by three, you instead say “Fizz” and if it is divisible by five you say “Buzz”. So now your maths teacher is pointing at all of your classmates in turn, and they happily shout “one!”, “two!”, “Fizz!”, “four!”, “Buzz!”… until he very deliberately points at you, fixing you with a steely gaze… time stands still, your mouth dries up, your palms become sweatier and sweatier until you finally manage to croak “Fizz!”. Doom is avoided, and the pointing finger moves on.
 
 So of course in order to avoid embarassment infront of your whole class, you have to get the full list printed out so you know what to say. Your class has about 33 pupils and he might go round three times before the bell rings for breaktime. Next maths lesson is on Thursday. Get coding!
 
 Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz “.
-```
 
 #### Sample of output:
 ```
@@ -90,7 +90,9 @@ To really understand problem, we can use a "Specification by example" technique 
 const fizzbuzz = require("./fizzbuzz.js");
 
 test('Given 1 should return 1', () => {
-    expect(fizzbuzz(1)).toBe(1);
+    answer = fizzbuzz(1);
+
+    expect(answer).toBe("1");
 });
 ```
 - Execute test to see expected result
@@ -188,11 +190,121 @@ Ran all test suites.
 | 99                | Fizz                   |
 | 100               | Buzz                   |
 
-- Repeat step 1 to 3 until the last test case
+Repeat step 1 to 3 
 
-#### More to read
-http://codingdojo.org/kata/FizzBuzz/
-https://8thlight.com/blog/uncle-bob/2013/09/23/Test-first.html
+- Add 2nd test case to fizzbuzz.test.js
+
+``` js
+const fizzbuzz = require("./fizzbuzz.js");
+
+test('Given 1 should return 1', () => {
+    answer = fizzbuzz(1);
+
+    expect(answer).toBe("1");
+});
+
+test('Given 2 should return 2', () => {
+    answer = fizzbuzz(2);
+
+    expect(answer).toBe("2");
+});
+```
+
+- Execute test to see it fail
+
+``` sh
+> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
+> jest
+
+ FAIL  ./fizzbuzz.test.js
+  ● Given 2 should return 2
+
+    expect(received).toBe(expected)
+
+    Expected value to be (using ===):
+      "2"
+    Received:
+      "1"
+
+      at Object.<anonymous>.test (fizzbuzz.test.js:8:25)
+      at process._tickCallback (internal/process/next_tick.js:103:7)
+
+  ✓ Given 1 should return 1 (4ms)
+  ✕ Given 2 should return 2 (3ms)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.358s
+Ran all test suites.
+npm ERR! Test failed.  See above for more details.
+```
+
+- Add code just for make the test pass
+
+```js
+module.exports = fizzbuzz;
+
+function fizzbuzz(number) {
+    if( number === 2 ){
+        return "2";
+    }
+    return "1";
+}
+```
+
+- Execute test again to see all the tests pass.
+
+```sh
+> jest
+
+ PASS  ./fizzbuzz.test.js
+  ✓ Given 1 should return 1 (5ms)
+  ✓ Given 2 should return 2
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.849s, estimated 1s
+Ran all test suites.
+```
+
+- Look for bad code and fix them
+
+Replace condition with string conversion. in fizzbuzz.js
+
+``` js
+module.exports = fizzbuzz;
+
+function fizzbuzz(number) {
+    return number.toString();
+}
+```
+
+Remove duplication in fizzbuzz.test.js
+
+``` js
+const fizzbuzz = require("./fizzbuzz.js");
+
+let testCases = [
+    { given: 1, expected: "1" },
+    { given: 2, expected: "2" }
+];
+
+testCases.forEach((testCase) => {
+    test('Given ' + testCase.given + ' should return ' + testCase.expected, () => {
+        expect(fizzbuzz(testCase.given)).toBe(testCase.expected);
+    });
+});
+```
+
+- Select the next test cases and repeat steps until the end.
+
+
+## More to read
+[http://codingdojo.org/kata/FizzBuzz/](http://codingdojo.org/kata/FizzBuzz/)
+
+[https://8thlight.com/blog/uncle-bob/2013/09/23/Test-first.html](https://8thlight.com/blog/uncle-bob/2013/09/23/Test-first.html)
 
 
 
