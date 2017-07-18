@@ -118,9 +118,11 @@ npm test
 - Create file fizzbuzz.js
 
 - Run test again and see what happen.
+
 ``` sh
 npm test
 ``` 
+
 ``` sh
 > jest
 
@@ -143,6 +145,7 @@ npm ERR! Test failed.  See above for more details.
 ```
 
 - Add code to fizzbuzz.js
+
 ``` js
 module.exports = fizzbuzz;
 
@@ -152,6 +155,7 @@ function fizzbuzz(number) {
 ```
 
 - Then run test again
+
 ``` sh
 > jest
 
