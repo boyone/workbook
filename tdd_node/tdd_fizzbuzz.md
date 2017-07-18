@@ -52,7 +52,7 @@ Buzz
 
 #### TDD cycle
  
-![TDD cycles](./images/tdd-cycle-with-thinking.png)
+![TDD cycles](https://github.com/boyone/workbook/raw/master/tdd_node/images/tdd-cycle-with-thinking.png)
 
 The TDD mantra: Red/Green/Refactor
 
@@ -100,8 +100,8 @@ test('Given 1 should return 1', () => {
 ```sh
 npm test
 ```
+
 ```sh
-> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
 > jest
 
  FAIL  ./fizzbuzz.test.js
@@ -121,7 +121,6 @@ npm test
 npm test
 ``` 
 ``` sh
-> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
 > jest
 
  FAIL  ./fizzbuzz.test.js
@@ -153,7 +152,6 @@ function fizzbuzz(number) {
 
 - Then run test again
 ``` sh
-> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
 > jest
 
  PASS  ./fizzbuzz.test.js
@@ -213,7 +211,6 @@ test('Given 2 should return 2', () => {
 - Execute test to see it fail
 
 ``` sh
-> fizzbuzz-jest@1.0.0 test /Users/JackSW/workspace/kata/javascript/fizzbuzz-jest
 > jest
 
  FAIL  ./fizzbuzz.test.js
