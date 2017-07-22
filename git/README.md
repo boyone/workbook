@@ -17,19 +17,6 @@ Working with remote GIT repository
         Update Source Code by Patching [pic]  
         Patching is not working any more   
 
-    Linux and Source Control Management History: from file and patch to system  
-
-    Linux kernel  
-        1,000 Developers  
-        Working all across the world  
-        Used on millions of computer  
-        Used 90% of Supercomputer  
-        Run on mobile  
-
-        11 years without version control system[1991 - 2002]  
-        2002 - 2005 Bitkeeper  
-        2005 - present Git  
-
     Version Control System Types?  
     ![alt text](./images/SCM-taxonomy.png "Version Control :: http://git.mikeward.org/")  
 
@@ -44,6 +31,21 @@ Working with remote GIT repository
 
     DAG Based Storage(directed acyclic graph)  
     ![alt text](./images/snapshots.png "Delta Based Storage :: Pro Git")  
+
+
+    Linux and Source Control Management History: from file and patch to system  
+
+    Linux kernel  
+        1,000 Developers  
+        Working all across the world  
+        Used on millions of computer  
+        Used 90% of Supercomputer  
+        Run on mobile  
+
+        11 years without version control system[1991 - 2002]  
+        2002 - 2005 Bitkeeper  
+        2005 - present Git  
+
 
     เป้าหมายการออกแบบ Goals!  
     ![alt text](./images/purpose.png "Purpose")  
@@ -67,7 +69,7 @@ Working with remote GIT repository
     ```
     apt-get install git
     ```
-    Configuration Git on Local Machine for First-Time Git Setup  
+    Configuration for First-Time Git Setup  
     Your Identity  
     ```
     git config --global user.name "your name"

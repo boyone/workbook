@@ -67,7 +67,7 @@ beforeEach(() => {});
 testcase('', () => {});
 afterEach(() => {});
 ```
-
+// "jest": { "testEnvironment": "node"}
 ##### Assertion
 
 #### Design with Positive, Negative, and Exception Tests
